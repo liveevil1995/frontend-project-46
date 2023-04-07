@@ -1,6 +1,12 @@
 import _ from 'lodash';
+import * as fs from 'node:fs';
+import path from 'node:path';
+import { cwd } from 'process';
+import formatter from '../src/formatter.js';
 
-const gendiff = (obj1, obj2) => {
+const gendiff = (filepath1, filepath2) => {
+  const obj1 = JSON.parse(fs.readFileSync(path.resolve(cwd(), filepath1), 'utf8'));
+  const obj2 = JSON.parse(fs.readFileSync(path.resolve(cwd(), filepath2), 'utf8'));
   const keys = _.sortBy(_.union(Object.keys(obj1), Object.keys(obj2)));
   const diff = keys.map((key) => {
     if (Object.hasOwn(obj1, key) && !Object.hasOwn(obj2, key)) {
@@ -36,7 +42,7 @@ const gendiff = (obj1, obj2) => {
       }
     }
   });
-  return diff;
+  return formatter(diff);
 };
 
 export default gendiff;
