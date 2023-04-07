@@ -3,8 +3,6 @@
 import { Command } from 'commander';
 import gendiff from '../src/index.js';
 
-
-
 const program = new Command();
 
 program
@@ -19,5 +17,3 @@ program
   });
 
 program.parse();
-
-

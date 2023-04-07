@@ -14,5 +14,5 @@ const filepath2 = getFixturePath('file2.json');
 const stylish = readFileSync(path.resolve(process.cwd(), '__fixtures__/result.txt'), 'utf-8');
 
 test('Examination JSON', () => {
-    expect(gendiff(filepath1, filepath2)).toEqual(stylish);
+  expect(gendiff(filepath1, filepath2)).toEqual(stylish);
 });
