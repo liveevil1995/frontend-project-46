@@ -6,8 +6,8 @@ import formatter from './formatter.js';
 import parser from './parser.js';
 
 const gendiff = (filepath1, filepath2) => {
-  const obj1 = JSON.parse(fs.readFileSync(path.resolve(`${cwd()}`, filepath1), 'utf8'));
-  const obj2 = JSON.parse(fs.readFileSync(path.resolve(`${cwd()}`, filepath2), 'utf8'));
+  const obj1 = parser(fs.readFileSync(path.resolve(`${cwd()}`, filepath1), 'utf8'), path.extname(filepath1).slice(1));
+  const obj2 = parser(fs.readFileSync(path.resolve(`${cwd()}`, filepath2), 'utf8'), path.extname(filepath2).slice(1));
   const keys = _.sortBy(_.union(Object.keys(obj1), Object.keys(obj2)));
   const diff = keys.map((key) => {
     if (Object.hasOwn(obj1, key) && !Object.hasOwn(obj2, key)) {
