@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import * as fs from 'node:fs';
 import path from 'node:path';
 import { cwd } from 'process';
