@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 const formatter = (data) => {
   const lines = data.flatMap(
     ({
@@ -17,6 +15,8 @@ const formatter = (data) => {
             `  - ${key}: ${value}`,
             `  + ${key}: ${value2}`,
           ];
+        default:
+          throw new Error(`Invalid type: ${type}`);
       }
     },
   );
