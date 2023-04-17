@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.52% </span>
+                <span class="strong">13.51% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/19</span>
+                <span class='fraction'>5/37</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.52% </span>
+                <span class="strong">13.51% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/19</span>
+                <span class='fraction'>5/37</span>
             </div>
         
             
@@ -103,75 +103,75 @@
 <a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const stringify = <span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const stringify = (<span class="fstat-no" title="function not covered" >value) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  if (typeof value === 'string') {</span>
 <span class="cstat-no" title="statement not covered" >    return `'${value}'`;</span>
-  }
+<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" >  if (typeof value === 'object' &amp;&amp; value !== null) {</span>
 <span class="cstat-no" title="statement not covered" >    return '[complex value]';</span>
-  }
+<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" >  return value;</span>
-};
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
-const formatPlain = <span class="fstat-no" title="function not covered" >(t</span>ree) =&gt; {
-  const generateDiffLines = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>ata, path = <span class="branch-0 cbranch-no" title="branch not covered" >'')</span> =&gt; {</span>
-    const lines = <span class="cstat-no" title="statement not covered" >data.map(<span class="fstat-no" title="function not covered" >(n</span>ode) =&gt; {</span>
-      const keyPath = <span class="cstat-no" title="statement not covered" >path === '' ? `${node.key}` : `${path}.${node.key}`;</span>
-&nbsp;
+const formatPlain = (<span class="fstat-no" title="function not covered" >tree) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  const generateDiffLines = (data, path = '') =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const lines = data.map((node) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      const keyPath = path === '' ? `${node.key}` : `${path}.${node.key}`;</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >      switch (node.type) {</span>
-        case 'nested':
+<span class="cstat-no" title="statement not covered" >        case 'nested':</span>
 <span class="cstat-no" title="statement not covered" >          return generateDiffLines(node.value, keyPath);</span>
-        case 'added':
+<span class="cstat-no" title="statement not covered" >        case 'added':</span>
 <span class="cstat-no" title="statement not covered" >          return `Property '${keyPath}' was added with value: ${stringify(node.value)}`;</span>
-        case 'deleted':
+<span class="cstat-no" title="statement not covered" >        case 'deleted':</span>
 <span class="cstat-no" title="statement not covered" >          return `Property '${keyPath}' was removed`;</span>
-        case 'changed':
+<span class="cstat-no" title="statement not covered" >        case 'changed':</span>
 <span class="cstat-no" title="statement not covered" >          return `Property '${keyPath}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;</span>
-        case 'unchanged':
+<span class="cstat-no" title="statement not covered" >        case 'unchanged':</span>
 <span class="cstat-no" title="statement not covered" >          return null;</span>
-        default:
+<span class="cstat-no" title="statement not covered" >        default:</span>
 <span class="cstat-no" title="statement not covered" >          throw new Error(`Unknown type of diff: ${node.type}`);</span>
-      }
-    });
-&nbsp;
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    });</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >    return lines.filter(Boolean).join('\n');</span>
-  };
+<span class="cstat-no" title="statement not covered" >  };</span>
 <span class="cstat-no" title="statement not covered" >  return generateDiffLines(tree);</span>
-};
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
 export default formatPlain;
 &nbsp;</pre></td></tr></table></pre>
@@ -181,7 +181,7 @@ export default formatPlain;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-17T12:01:59.789Z
+                at 2023-04-17T13:05:08.282Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
